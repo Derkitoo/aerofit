@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="mainBgGrad192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A00E0"/>
+      <stop offset="45%" stop-color="#6C5CE7"/>
+      <stop offset="100%" stop-color="#FD79A8"/>
+    </linearGradient>
+
+    <!-- Glass Sheen -->
+    <linearGradient id="glassSheen192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Pulse Line Gradient -->
+    <linearGradient id="pulseGrad192" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#FF7675"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <radialGradient id="centerLight192" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#A29BFE" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#6C5CE7" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="shadowDepth192" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#2D3436" flood-opacity="0.4"/>
+    </filter>
+
+    <filter id="neonGlow192" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#FD79A8" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Main Squircle -->
+  <rect width="192" height="192" rx="44" fill="url(#mainBgGrad192)"/>
+
+  <!-- Radial Depth -->
+  <circle cx="96" cy="72" r="80" fill="url(#centerLight192)"/>
+
+  <!-- Glass Border -->
+  <rect x="2" y="2" width="188" height="188" rx="42" fill="none" stroke="url(#glassSheen192)" stroke-width="2"/>
+
+  <!-- Fitness Pulse Emblem -->
+  <g filter="url(#shadowDepth192)">
+    <!-- Dumbbell Backdrop -->
+    <rect x="42" y="81" width="9" height="30" rx="4.5" fill="#FFFFFF" opacity="0.25"/>
+    <rect x="47" y="75" width="8" height="42" rx="4" fill="#FFFFFF" opacity="0.35"/>
+    
+    <rect x="141" y="81" width="9" height="30" rx="4.5" fill="#FFFFFF" opacity="0.25"/>
+    <rect x="137" y="75" width="8" height="42" rx="4" fill="#FFFFFF" opacity="0.35"/>
+
+    <rect x="53" y="91" width="86" height="10" rx="5" fill="#FFFFFF" opacity="0.4"/>
+
+    <!-- Pulse Line -->
+    <path d="M 36,96 
+             H 64 
+             L 77,57 
+             L 96,135 
+             L 115,72 
+             L 128,96 
+             H 156" 
+          fill="none" 
+          stroke="url(#pulseGrad192)" 
+          stroke-width="8" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+          filter="url(#neonGlow192)"/>
+
+    <circle cx="77" cy="57" r="4" fill="#FFFFFF"/>
+    <circle cx="96" cy="135" r="4.5" fill="#FF7675"/>
+    <circle cx="115" cy="72" r="4" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Glass Top Overlay -->
+  <path d="M 0,44 
+           C 0,19.7 19.7,0 44,0 
+           H 148 
+           C 172.3,0 192,19.7 192,44 
+           V 82 
+           C 120,68 68,98 0,72 
+           Z" 
+        fill="url(#glassSheen192)"/>
+</svg>
