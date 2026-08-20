@@ -14,139 +14,14 @@
 
   <title>FitPulse - Suivi Sportif & Diète</title>
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-          },
-          colors: {
-            'slate-dark': '#2D3436',
-            'purple-main': '#6C5CE7',
-            'pink-main': '#FD79A8',
-            'coral-accent': '#FF7675',
-            'violet-soft': '#A29BFE',
-            'gray-muted': '#B2BEC3',
-            'bg-app': '#F5F7FB',
-          },
-          boxShadow: {
-            'soft-card': '0 10px 25px rgba(112, 100, 150, 0.08)',
-            'pill-active': '0 8px 20px rgba(253, 121, 168, 0.35)',
-            'purple-glow': '0 10px 22px rgba(108, 92, 231, 0.28)',
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    /* Dynamic Theme Variables */
-    :root {
-      --color-primary: #6C5CE7;
-      --color-secondary: #FD79A8;
-      --gradient-main: linear-gradient(135deg, #6C5CE7 0%, #FD79A8 100%);
-      --gradient-pill: linear-gradient(135deg, #FF7675 0%, #FD79A8 100%);
-    }
-
-    .theme-emerald {
-      --color-primary: #00B894;
-      --color-secondary: #00CEC9;
-      --gradient-main: linear-gradient(135deg, #00B894 0%, #00CEC9 100%);
-      --gradient-pill: linear-gradient(135deg, #55E6C1 0%, #00CEC9 100%);
-    }
-
-    .theme-sunset {
-      --color-primary: #FF7675;
-      --color-secondary: #E17055;
-      --gradient-main: linear-gradient(135deg, #FF7675 0%, #E17055 100%);
-      --gradient-pill: linear-gradient(135deg, #FAB1A0 0%, #E17055 100%);
-    }
-
-    .bg-gradient-primary {
-      background: var(--gradient-main);
-    }
-    .bg-gradient-pill {
-      background: var(--gradient-pill);
-    }
-    .text-gradient {
-      background: var(--gradient-main);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    /* Slider styling */
-    input[type=range] {
-      -webkit-appearance: none;
-      width: 100%;
-      background: #EAEBF8;
-      height: 10px;
-      border-radius: 999px;
-      outline: none;
-    }
-    input[type=range]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: var(--gradient-main);
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(108, 92, 231, 0.4);
-      border: 2px solid #FFFFFF;
-      transition: transform 0.1s ease;
-    }
-    input[type=range]::-webkit-slider-thumb:active {
-      transform: scale(1.15);
-    }
-
-    /* Circular SVG Gauge Transition */
-    .gauge-circle {
-      transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-      transform: rotate(-90deg);
-      transform-origin: 50% 50%;
-    }
-
-    /* Screen view animations */
-    .screen-view {
-      transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-    }
-    .screen-hidden {
-      display: none !important;
-      opacity: 0;
-      transform: translateY(6px);
-    }
-
-    /* No scrollbars */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-
-    /* Laser Scanner animation */
-    @keyframes scanLine {
-      0% { top: 10%; opacity: 0.8; }
-      50% { top: 85%; opacity: 1; }
-      100% { top: 10%; opacity: 0.8; }
-    }
-    .scanner-laser {
-      animation: scanLine 2s infinite ease-in-out;
-    }
-  </style>
 </head>
 
 <body class="h-full bg-[#F5F7FB] text-slate-dark antialiased flex flex-col items-center justify-start sm:py-4">
-  <div id="root"></div>
+  <div id="root" class="w-full h-full flex flex-col items-center justify-start"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
